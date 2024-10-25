@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px 20px; 
+    background-image: url('../Images/Background part 2.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: fixed;
+    color: #333;
+}
+
+.container {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.container.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(255, 102, 102, 0.8); 
+    border: 2px solid #cc0000; 
+    border-radius: 8px; 
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #cc0000; 
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent; 
+}
+
+nav ul li a:hover {
+    color: #ff0000; 
+    border-bottom: 2px solid #ff0000; 
+}
+
+
+
+/* Centered Text Box Styling */
+.centered-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Blurry background */
+    margin: 100px auto; /* Centers the box */
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 10px; /* Soft edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Blurry effect */
+	margin-top: 20px
+}
+
+.centered-box h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.centered-box p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Social Media Icons Styling */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+/* Footer styling */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 102, 102, 0.8);
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: -20;
+}

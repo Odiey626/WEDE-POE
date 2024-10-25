@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Shinobi Clothing Store for inquiries about our products and services. We're located in Soweto, Protea North.">
+    <title>Shinobi Clothing Store - Contact Us</title>
+    <link rel="stylesheet" href="CSS/Styles 3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Thee Shinobi</div>
+            <ul class="nav-links">
+                <li><a href="Homepage.html">Homepage</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="Products and Services.html">Products and Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="Contact us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact Information Section -->
+        <section id="about" class="centered-content">
+            <div class="text-box">
+                <h1 style="color: white; text-align: center;">Contact Us</h1>
+                <dl class="question-list">
+                    <dt class="question" style="color: white; text-align: center;">Thee Shinobi</dt>
+                    <dd class="answer" style="color: white; text-align: center;">Tel: +27 82 873 4095</dd>
+                    <dd class="answer" style="text-align: center;">
+                        <img src="images/Contact us Images/icons8-email-open-100.png" style="width: 100px; height: auto;" alt="Email icon for contacting Shinobi Clothing Store">
+                    </dd>
+                    <dt class="question" style="color: white; text-align: center;">OUR EMAIL</dt>
+                    <dd class="answer" style="color: white; text-align: center;">vempiro@gmail.com</dd>
+                    <dd class="answer" style="text-align: center;">
+                        <img src="images/Contact us Images/icons8-home-address-100.png" style="width: 100px; height: auto;" alt="Address icon">
+                    </dd>
+                    <dt class="question" style="color: white; text-align: center;">ADDRESS</dt>
+                    <dd class="answer" style="color: white; text-align: center;">1886 Kgaladi St, Protea North, Soweto, 1818</dd>
+                </dl>
+
+                <!-- Get in Touch Form Section inside text-box -->
+                <h2 style="color: white; text-align: center;">Get in Touch</h2>
+                <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+                    <label for="name" style="color: white;">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+                    
+                    <label for="email" style="color: white;">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+                    
+                    <label for="subject" style="color: white;">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required><br><br>
+                    
+                    <label for="message" style="color: white;">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea><br><br>
+                    
+                    <input type="submit" value="Submit">
+                </form>
+
+                <!-- Newsletter Section inside text-box -->
+                <h2 style="color: white; text-align: center;">Subscribe to Our Newsletter</h2>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSce8xNhJwH9_8xOr1qQ9ixzFbLJXeGzoN_Hc5QAA/formResponse?embedded=true" width="640" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-box">
+            <p>&copy; <span id="year"></span> Shinobi Clothing Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Date and Form Validation -->
+    <script src="JS/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const yearSpan = document.getElementById("year");
+            const currentYear = new Date().getFullYear();
+            yearSpan.textContent = currentYear;
+
+            const form = document.querySelector("form");
+            const nameField = document.getElementById("name");
+            const emailField = document.getElementById("email");
+
+            // Clear initial values when clicked
+            nameField.addEventListener("focus", () => nameField.value = "");
+            emailField.addEventListener("focus", () => emailField.value = "");
+
+            // Form validation
+            form.addEventListener("submit", function(event) {
+                if (nameField.value === "" || emailField.value === "") {
+                    alert("Please fill in all required fields.");
+                    event.preventDefault(); // Prevent form submission
+                }
+            });
+        });
+    </script>
+</body>
+</html>
